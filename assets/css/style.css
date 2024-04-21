@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,600&family=Poppins:wght@300;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* div {
+    outline: 2px solid black;
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+}
+
+.dni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    overflow: hidden;
+    border-radius: 2.5vw;
+}
+
+.covers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    z-index: 1;
+    border: 1vw solid transparent;
+    border-image: repeating-linear-gradient(45deg, rgba(0, 255, 0, 0.25), rgba(0, 255, 0, 0.25) 1vw, rgba(255, 0, 0, 0.25) 1vw, rgba(255, 0, 0, 0.25) 2vw) 1; 
+}
+
+.covers::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/curva.png");
+    background-repeat: repeat;
+    background-size: 3vw;
+    opacity: 0.1;
+}
+
+.bg {
+    position: relative;
+}
+
+.bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(-45deg, rgba(0, 255, 0, 0.8), rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8)), url("../img/catalonia-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+.dreta {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0 0 2.5vw 0;
+}
+
+.dades {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.esquerra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.dreta,
+.esquerra {
+    flex: 1;
+    padding: 2vw;
+}
+
+.band {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 5vw;
+    height: 3.5vw;
+}
+
+.foto,
+#firma {
+    display: flex;
+    justify-content: center;
+}
+
+.band .bandera1,
+.band .bandera2 {
+    display: flex;
+    height: 3.5vw;
+    width: 5vw;
+}
+.imatges img{
+    border-radius: 0.5vw;
+    object-fit: cover;
+}
+
+.foto img {
+    width: 15vw;
+    height: 20vw;
+}
+
+#firma img {
+    width: 15vw;
+    padding: 1vw;
+}
+
+.dades div {
+    padding: 1vw;
+}
+
+#cog,
+#nom,
+#naix,
+#cad,
+#sexe,
+#nac {
+    font-family: 'Poppins';
+    font-size: 1vw;
+    font-weight: normal;
+}
+
+
+#cog-val,
+#nom-val,
+#naix-val,
+#cad-val,
+#sexe-val,
+#nac-val {
+    font-family: 'Poppins bold';
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+#id {
+    font-family: 'Poppins bold';
+    font-size: 1vw;
+    font-weight: normal;
+}
+
+#id-val {
+    font-family: 'Poppins bold';
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.valors {
+    display: block;
+}
+
+#titol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+    z-index: 2;
+}
+
+#titol-val {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, yellow, red, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+#gen {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#gen img {
+    width: 10vw;
+}
+
+#sexe-nacionalitat,
+#dates,
+#cog {
+    display: flex;
+    padding: 0;
+    gap: 2vw;
+}
